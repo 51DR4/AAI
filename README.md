@@ -1,41 +1,41 @@
 # ArchitectAI
 ### Overview
-ArchitectAI (AAI) is an Android Application for Exploring Software Architecture Sketches with LLMs. Our app leverages the power of the Large Language Model Gemini to analyze software architectures. By sending parallel requests to the LLM and storing the results in a database, it optimizes response speed and efficiency. The user-friendly interface provides multiple features that allow users to capture, upload, and analyze images or text transcriptions of software architectures.
+ArchitectAI leverages the power of the Large Language Model Gemini to analyze software architectures. By sending parallel requests to the LLM and storing the results in a database, it optimizes response speed and efficiency. The user-friendly interface provides multiple features that allow users to capture, upload, and analyze images or text transcriptions of software architectures.
 
 ## Features
 
   **Home Page**:
 
-  Dark Mode
-  Help Button: Access a guide to using the app.
-  History: Save analysis results for future reference. 
+  - *Dark Mode*
+  - *Help Button*: Access a guide to using the app.
+  - *History*: Save analysis results for future reference. 
 
   **Main Functionalities**:
 
-  Capture Image: Use the CameraX feature to capture high-quality images of software architectures.
-  Upload Image: Upload an image from your device.
-  Upload Text Description / Audio Transcription: Submit a text-based input of a software architecture for analysis.
+  - *Capture Image*: Use the CameraX feature to capture high-quality images of software architectures.
+  - *Upload Image*: Upload an image from your device.
+  - *Upload Text Description / Audio Transcription*: Submit a text-based input of a software architecture for analysis.
   
   **Image Handling in camera and preview page**:
 
-  Zoom: users can zoom while taking a picture to avoid impractical parts.
-  Edit: After capturing or uploading an image, users can crop the image and edit it.
-  Swipe Page: swipe the page to add additional textual information about the architecture before submitting.
+  - *Zoom*: users can zoom while taking a picture to avoid impractical parts.
+  - *Edit*: After capturing or uploading an image, users can crop the image and edit it.
+  - *Additional Context*: swipe the page to add additional textual information about the architecture before submitting.
   
   **Analysis Feature page**:
 
-  Request Validation: Ensures the submission is a valid software architecture.
-  LLM Analysis: Submits the image and additional information to LLM Gemini for analysis, displaying the result in a formatted HTML view.
-  Output Customization: Choose from various outputs like Component Diagram or State Diagram, and view the architecture visualized using PlantUML/C4 format.
-  Code Access: View and copy the PlantUML code for the generated diagrams.
-  Enhanced Architecture: Option to get an improved version of the architecture based on user-defined filters such as energy efficiency, sustainability, security, and maintainability.
-  History: Allow the user to choose whether to save the result or discard it.
+  - *Request Validation*: Ensures the submission is a valid software architecture.
+  - *LLM Analysis*: Submits the image and additional information to LLM Gemini for analysis, displaying the result in a formatted HTML view.
+  - *Output Customization*: Choose from various outputs like Component Diagram or State Diagram, and view the architecture visualized using PlantUML/C4 format.
+  - *Code Access*: View and copy the PlantUML code for the generated diagrams.
+  - *Enhanced Architecture*: Option to get an improved version of the architecture based on user-defined filters such as energy efficiency, sustainability, security, and maintainability.
+  - *History*: Allow the user to choose whether to save the result or discard it.
   
   **Additional Features**:
 
-  Summary Button: Summarizes long text to improve readability.
-  Help Section: A detailed guide with an explanatory video on how to use the application.
-  Sharing and Saving: Export results as PDFs or save images for future use.
+  - *Summary Button*: Summarizes long text to improve readability.
+  - *Help Section*: A detailed guide with an explanatory video on how to use the application.
+  - *Sharing and Saving*: Export results as PDFs or save images for future use.
   
 ## Installation
 1. **Download the Source Code**
