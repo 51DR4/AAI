@@ -1,9 +1,30 @@
+<!--
+  ~ Copyright (c) 2024 ABB-03
+  ~ Licensed under the MIT License. See the LICENSE file for details.
+  ~
+  -->
+
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.ABB" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/color_primary_light</item>
+        <item name="colorPrimaryVariant">@color/color_primary_variant_light</item>
+
+
+
+        <!--        &lt;!&ndash; Secondary brand color. &ndash;&gt;
+                <item name="colorSecondary">@color/color_secondary_light</item>
+                <item name="colorSecondaryVariant">@color/color_secondary_variant_light</item>
+                <item name="colorOnSecondary">@color/color_on_secondary_light</item>-->
+
+        <!-- Background and text colors for light mode. -->
+        <item name="android:windowBackground">@color/background_light</item>
+        <item name="android:textColorPrimary">@color/text_light</item>
+<!--        <item name="android:textColorSecondary">@color/black_2</item>-->
+
+
     </style>
 
-    <style name="Theme.ABB" parent="Base.Theme.ABB" />
-</resources>
+v</resources>

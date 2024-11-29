@@ -1,3 +1,32 @@
+<!--
+  ~ Copyright (c) 2024 ABB-03
+  ~ Licensed under the MIT License. See the LICENSE file for details.
+  ~
+  -->
+
 <resources>
     <string name="app_name">ABB</string>
+    <string name="take_picture">Take picture</string>
+    <string name="AAI">AAI</string>
+    <string name="ArchitectAI">ArchitectAI</string>
+    <string name="output_format"> output format </string>
+    <string name="improvements"> improvements </string>
+    <string name="save"> save / share </string>
+    <string name="loading_message"></string>
+    <string name="menu_camera">Camera</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="navigation_drawer_open">Drawer open</string>
+    <string name="navigation_drawer_close">Drawer closed</string>
+    <string name="about_us">
+"Welcome to ArchitectAI, an app designed by students from Ruhr University Bochum (RUB) as part of the Software Engineering Lab course. Our app is designed to help software architects by analysing software architectures and providing a range of output formats.
+
+ArchitectAI makes use of advanced AI technology to provide detailed analysis and insights, helping architects make informed decisions about their projects.
+It offers multiple input options. Users can take pictures of architectural diagrams or sketches using the camera, upload images from their gallery, or even provide a text description of their architecture.
+Once the input containing a valid software architecture is submitted and successfully analysed, the app allows users to choose the output format they prefer, whether it be system architecture diagrams, class diagrams, component diagrams, or any other format that suits their needs. This flexibility is designed to facilitate the workflow for architects, making it easier to visualize and improve their software designs.
+A unique feature of ArchitectAI is the rating charts, which visually evaluates the user's architecture and the improved version suggested by the app based on certain analysis aspects chosen by the user. This feature provides a clear and insightful comparison between the two versions of the architecture, helping users easily identify areas for improvement in their software designs.
+
+Thank you for using ArchitectAI. We look forward to supporting your journey in creating robust and efficient software architectures.
+"
+    </string>
+    <string name="camera_double_click_text">Double click to capture an image</string>
 </resources>

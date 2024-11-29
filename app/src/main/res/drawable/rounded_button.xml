@@ -1,0 +1,36 @@
+<!--
+  ~ Copyright (c) 2024 ABB-03
+  ~ Licensed under the MIT License. See the LICENSE file for details.
+  ~
+  -->
+
+<!-- res/drawable/rounded_rectangle_cross.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background with rounded corners -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="6dp" />
+            <solid android:color="@color/color_primary_light" />
+        </shape>
+    </item>
+
+    <!-- Horizontal line of the cross -->
+    <item
+        android:left="23.5dp"
+        android:right="23.5dp">
+        <shape android:shape="rectangle">
+            <size android:height="50dp" />
+            <solid android:color="@color/background_light" />
+        </shape>
+    </item>
+
+    <!-- Vertical line of the cross -->
+    <item
+        android:top="23.5dp"
+        android:bottom="23.5dp">
+        <shape android:shape="rectangle">
+            <size android:width="50dp" />
+            <solid android:color="@color/background_light" />
+        </shape>
+    </item>
+</layer-list>

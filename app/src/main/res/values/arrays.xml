@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2024 ABB-03
+  ~ Licensed under the MIT License. See the LICENSE file for details.
+  ~
+  -->
+
+<resources>
+    <string-array name="output_popup">
+        <item> Select Output Type </item>
+        <item> System Architecture Diagram</item>
+        <item> Component Diagram</item>
+        <item> Class Diagram</item>
+        <item> Object Diagram</item>
+        <item> State Diagram</item>
+        <item> Use-Case Diagram</item>
+        <item> Sequence Diagram</item>
+    </string-array>
+</resources>

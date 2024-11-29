@@ -1,61 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2024 ABB-03
+  ~ Licensed under the MIT License. See the LICENSE file for details.
+  ~
+  -->
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context="com.application.aai.views.MainActivity">
 
-
-    <Button
-        android:id="@+id/kameraBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
-        android:onClick="kameraClick"
-        android:text="Kamera"
-        app:layout_constraintEnd_toStartOf="@+id/gallerieBtn"
-        app:layout_constraintHorizontal_bias="0.71"
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/gallerieBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
-        android:onClick="gallerieClick"
-        android:text="Gallerie"
-        app:layout_constraintEnd_toStartOf="@id/audioBtn"
-        app:layout_constraintStart_toEndOf="@id/kameraBtn"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/audioBtn"
-        android:layout_width="wrap_content"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="84dp"
-        android:onClick="audioClick"
-        android:text="Audio"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.339"
-        app:layout_constraintStart_toEndOf="@+id/gallerieBtn"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/hietoryBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="551dp"
-        android:onClick="historyClick"
-        android:text="History"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/light_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gallerieBtn"
-        app:layout_constraintVertical_bias="1.0" />
+        app:menu="@menu/navigation_menu"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="200dp"
+        android:alpha="1"
+        android:contentDescription="add input button"
+        android:forceHasOverlappingRendering="false"
+        android:foreground="@drawable/rounded_button"
+        android:freezesText="true"
+        android:onClick="addMenuClick"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/explanation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="156dp"
+        android:background="@drawable/light_background"
+        android:paddingHorizontal="14dp"
+        android:paddingVertical="1dp"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:text="click + to add an input"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="-200dp"
+        android:alpha="0.15"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/app_logo_big" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

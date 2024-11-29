@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2024 ABB-03
+  ~ Licensed under the MIT License. See the LICENSE file for details.
+  ~
+  -->
+
+<resources>
+
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_primary_light">#D14242</color>
+    <color name="color_primary_variant_light">#FF7A7E</color>
+    <color name="border_light">@color/color_primary_light</color> <!-- Red color for light mode -->
+
+    <!-- vector color -->
+    <color name="vector_color_light">#FFA0A3</color>
+    <color name="vector_color_dark">@color/background_dark</color>
+    <!--    <color name="color_on_primary_light">@color/color_on_primary_light</color>-->
+
+    <!-- Secondary brand color. -->
+    <!--<color name="color_secondary_light">@color/color_secondary_light</color>
+    <color name="color_secondary_variant_light">@color/color_secondary_variant_light</color>
+    <color name="color_on_secondary_light">@color/color_on_secondary_light</color>-->
+
+    <!-- Background and text colors for light mode. -->
+    <color name="background_light">#FFF6F6</color>
+    <color name="text_light">#000000</color>
+    <!--    <color name="black_2">@color/black_2</color>-->
+
+    <!-- DarkMode Colors   -->
+    <color name="color_primary_dark">#FF7A7E</color>
+    <color name="color_primary_variant_dark">@color/color_primary_variant_light</color>
+    <color name="border_dark">#BDBDBD</color> <!-- Grey color for dark mode -->
+
+    <!--    <color name="color_on_primary_dark">@color/color_on_primary_dark</color>-->
+
+    <!-- Secondary brand color. -->
+    <!-- <color name="colorSecondary">@color/color_secondary_dark</color>
+     <color name="colorSecondaryVariant">@color/color_secondary_variant_dark</color>
+     <color name="colorOnSecondary">@color/color_on_secondary_dark</color>-->
+
+    <!-- Background and text colors for light mode. -->
+    <color name="background_dark">#212121</color>
+    <color name="text_dark">#FFFF</color>
+    <!--    <color name="android:textColorSecondary">@color/white_2</color>-->
+
+    <color name="divider_color">#F6D7D7</color>
+
+    <!-- Transparency -->
+    <color name="transparent">#00000000</color>
+
+    <!-- Complementary Colors -->
+    <color name="accent_color">#FFBF00</color>
+    <!--    <color name="background_colorDark">#B9B6B6</color>-->
+
+    <color name="warning_background">#11FF00</color>
+</resources>

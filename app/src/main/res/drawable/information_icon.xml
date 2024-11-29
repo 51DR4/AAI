@@ -1,0 +1,14 @@
+<!--
+  ~ Copyright (c) 2024 ABB-03
+  ~ Licensed under the MIT License. See the LICENSE file for details.
+  ~
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:height="50dp" android:viewportHeight="28.8" android:viewportWidth="28.8" android:width="50dp">
+      
+    <path
+        android:pathData="M0,0h28.8v28.8h-28.8z" android:strokeColor="@color/color_primary_light" android:strokeWidth="0"/>
+      
+    <path android:fillColor="#00000000" android:pathData="M14.4,19.4L14.4,19.393M14.4,17.257C14.4,14.043 17.4,14.757 17.4,12.257C17.4,10.679 16.057,9.4 14.4,9.4C13.057,9.4 11.92,10.241 11.537,11.4M23.4,14.4C23.4,19.371 19.371,23.4 14.4,23.4C9.429,23.4 5.4,19.371 5.4,14.4C5.4,9.429 9.429,5.4 14.4,5.4C19.371,5.4 23.4,9.429 23.4,14.4Z" android:strokeColor="@color/color_primary_light" android:strokeLineCap="round" android:strokeLineJoin="round" android:strokeWidth="1.272"/>
+    
+</vector>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2024 ABB-03
+  ~ Licensed under the MIT License. See the LICENSE file for details.
+  ~
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/text"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.application.aai.views.DescriptionActivity">
+
+    <ImageView
+        android:id="@+id/topcolor"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="-4dp"
+        android:background="@drawable/top_bar"
+        app:layout_constraintBottom_toTopOf="@+id/transcriptionTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/transcriptionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/border_light"
+        android:elegantTextHeight="true"
+        android:includeFontPadding="true"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textIsSelectable="true"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/grid_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/copyButton2"
+        android:layout_width="50dp"
+        android:layout_height="43dp"
+        android:background="@color/transparent"
+        android:onClick="copyText"
+        app:layout_constraintBottom_toBottomOf="@+id/left_topcolor"
+        app:layout_constraintEnd_toEndOf="@+id/transcriptionTextView"
+        app:layout_constraintEnd_toStartOf="@+id/clear_text2"
+        app:layout_constraintTop_toTopOf="@+id/topcolor"
+        app:srcCompat="@drawable/copied_icon" />
+
+    <GridLayout
+        android:id="@+id/grid_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="30dp"
+        android:columnCount="2"
+        android:rowCount="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/sum_button"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_rowSpan="1"
+            android:layout_columnSpan="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_marginStart="20dp"
+            android:backgroundTint="@color/color_primary_dark"
+            android:onClick="sumClick"
+            android:text="Summarize"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/analyse_button"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_rowSpan="1"
+            android:layout_columnSpan="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:onClick="onAnalyseClicked"
+            android:paddingHorizontal="27dp"
+            android:text="Analyse"
+            android:textSize="16sp"
+            tools:ignore="MissingConstraints" />
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Add architecture description"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+        android:textColor="@color/background_light"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/topcolor"
+        app:layout_constraintStart_toStartOf="@+id/topcolor"
+        app:layout_constraintTop_toTopOf="@+id/topcolor" />
+
+    <ImageButton
+        android:id="@+id/clear_text2"
+        android:layout_width="48dp"
+        android:layout_height="42dp"
+        android:background="@color/transparent"
+        android:keyboardNavigationCluster="false"
+        android:onClick="clearClick"
+        app:layout_constraintEnd_toEndOf="@+id/topcolor"
+        app:layout_constraintTop_toTopOf="@+id/topcolor"
+        app:srcCompat="@drawable/clear_text" />
+
+    <View
+        android:id="@+id/dividerClear"
+        android:layout_width="1dp"
+        android:layout_height="32dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="@+id/topcolor"
+        app:layout_constraintEnd_toEndOf="@+id/copyButton2"
+        app:layout_constraintStart_toEndOf="@+id/copyButton2"
+        app:layout_constraintTop_toTopOf="@+id/topcolor" />
+
+    <View
+        android:id="@+id/dividerCopy"
+        android:layout_width="1dp"
+        android:layout_height="32dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="@+id/topcolor"
+        app:layout_constraintEnd_toStartOf="@+id/copyButton2"
+        app:layout_constraintTop_toTopOf="@+id/topcolor"
+        app:layout_constraintVertical_bias="0.5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

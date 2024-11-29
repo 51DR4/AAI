@@ -1,0 +1,13 @@
+<!--
+  ~ Copyright (c) 2024 ABB-03
+  ~ Licensed under the MIT License. See the LICENSE file for details.
+  ~
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:height="25dp" android:viewportHeight="256" android:viewportWidth="256" android:width="24dp">
+      
+    <path android:strokeWidth="4" android:strokeColor="@color/divider_color" android:fillColor="@color/divider_color" android:pathData="M123.3,153.4c2.4,2.4 5.9,4.7 10.6,4.7c3.5,0 7.1,-1.2 10.6,-4.7l53.1,-53.1c2.4,-2.4 2.4,-5.9 0,-8.3c-2.4,-2.4 -5.9,-2.4 -8.3,0l-49.6,49.6V18.9c0,-3.5 -2.4,-5.9 -5.9,-5.9c-3.5,0 -5.9,2.3 -5.9,5.9v122.7L78.4,92c-2.4,-2.4 -5.9,-2.4 -8.3,0s-2.4,5.9 0,8.3L123.3,153.4z"/>
+      
+    <path android:strokeWidth="4" android:strokeColor="@color/divider_color" android:fillColor="@color/divider_color" android:pathData="M209.4,36.5c-3.5,0 -5.9,2.4 -5.9,5.9c0,3.5 2.4,5.9 5.9,5.9c16.5,0 24.8,14.2 24.8,28.3v123.9c0,4.7 -1.2,30.7 -21.2,30.7H54.8c-16.5,0 -33,-15.3 -33,-30.7V76.7c0,-15.3 13,-28.3 28.3,-28.3c3.5,0 5.9,-2.4 5.9,-5.9c0,-3.5 -2.4,-5.9 -5.9,-5.9C27.7,36.5 10,54.2 10,76.7v123.9c0,21.2 22.4,42.5 44.8,42.5H213c20.1,0 33,-16.5 33,-42.5V76.7C246,53.1 230.7,36.5 209.4,36.5z"/>
+    
+</vector>

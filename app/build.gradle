@@ -1,19 +1,38 @@
 plugins {
     alias(libs.plugins.androidApplication)
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
 }
 
+Properties localProperties = new Properties()
+localProperties.load(new FileInputStream(rootProject.file("local.properties")))
+
 android {
-    namespace 'com.example.abb'
+    namespace 'com.example.aai'
     compileSdk 34
 
+    buildFeatures {
+        buildConfig = true
+    }
+    sourceSets {
+        main {
+            assets.srcDirs = ['src/main/assets']
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/INDEX.LIST'
+        exclude 'mozilla/public-suffix-list.txt'
+        exclude 'META-INF/DEPENDENCIES'
+    }
+
     defaultConfig {
-        applicationId "com.example.abb"
-        minSdk 24
+        applicationId "com.example.aai"
+        minSdkVersion 26
         targetSdk 34
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "apiKey", "\"${localProperties.getProperty('apiKey')}\"")
     }
 
     buildTypes {
@@ -26,6 +45,12 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    packagingOptions {
+        exclude 'META-INF/INDEX.LIST'
+        exclude 'mozilla/public-suffix-list.txt'
+        exclude 'META-INF/DEPENDENCIES'
+    }
 }
 
 dependencies {
@@ -34,7 +59,58 @@ dependencies {
     implementation libs.material
     implementation libs.activity
     implementation libs.constraintlayout
+    implementation libs.firebase.crashlytics.buildtools
+    implementation libs.glide
+    implementation libs.mediarouter
+    implementation libs.common
+    annotationProcessor libs.compiler
+    implementation libs.gson
+    // OkHttp for network operations
+    implementation libs.okhttp
+
+    // PlantUML required dependency
+    implementation libs.plantuml
+
+
+    // PlantUML required dependency
+    implementation 'net.sourceforge.plantuml:plantuml:1.2023.2'
+
+
+    // org.json for JSON handling
+    implementation libs.json
+    implementation libs.ucrop
+
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
+
+    // add the dependency for the Google AI client SDK for Android
+    implementation(libs.generativeai)
+
+    // Required for one-shot operations (to use `ListenableFuture` from Guava Android)
+    implementation(libs.guava)
+
+    // Required for streaming operations (to use `Publisher` from Reactive Streams)
+    implementation(libs.reactive.streams)
+
+    implementation libs.exifinterface
+    
+    buildscript {
+        dependencies {
+            classpath libs.secrets.gradle.plugin
+        }
+    }
+
+    //CameraX required dependencies
+    def camerax_version = "1.0.0-beta05"
+    implementation "androidx.camera:camera-camera2:${camerax_version}"
+    implementation "androidx.camera:camera-lifecycle:${camerax_version}"
+    implementation"androidx.camera:camera-view:1.0.0-alpha12"
+    implementation "androidx.camera:camera-extensions:1.0.0-alpha12"
+    implementation "androidx.activity:activity:1.7.0"
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'org.jsoup:jsoup:1.14.3'
 }

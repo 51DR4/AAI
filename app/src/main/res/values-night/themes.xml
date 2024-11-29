@@ -1,7 +1,28 @@
+<!--
+  ~ Copyright (c) 2024 ABB-03
+  ~ Licensed under the MIT License. See the LICENSE file for details.
+  ~
+  -->
+
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.ABB" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/color_primary_dark</item>
+        <item name="colorPrimaryVariant">@color/color_primary_variant_dark</item>
+<!--        <item name="colorOnPrimary">@color/color_on_primary_dark</item>-->
+
+
+
+        <!-- Secondary brand color. -->
+       <!-- <item name="colorSecondary">@color/color_secondary_dark</item>
+        <item name="colorSecondaryVariant">@color/color_secondary_variant_dark</item>
+        <item name="colorOnSecondary">@color/color_on_secondary_dark</item>
+-->
+        <!-- Background and text colors for dark mode. -->
+        <item name="android:windowBackground">@color/background_dark</item>
+        <item name="android:textColorPrimary">@color/text_dark</item>
+        <!--<item name="android:textColorSecondary">@color/white_2</item>-->
     </style>
 </resources>

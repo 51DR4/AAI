@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2024 ABB-03
+  ~ Licensed under the MIT License. See the LICENSE file for details.
+  ~
+  -->
+
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.application.aai.views.AnalysisActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/analysis"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <GridLayout
+            android:id="@+id/grid_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="30dp"
+            android:columnCount="2"
+            android:rowCount="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Spinner
+                android:id="@+id/output_format_popup"
+                android:layout_width="22dp"
+                android:layout_height="54dp"
+                android:layout_row="0"
+                android:layout_columnSpan="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_marginEnd="10dp"
+                android:foreground="@drawable/border_light"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/improvementButton"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageButton
+                android:id="@+id/improvementButton"
+                android:layout_width="wrap_content"
+                android:layout_height="54dp"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_columnSpan="1"
+                android:layout_columnWeight="1"
+                android:background="@color/transparent"
+                android:onClick="improvementClick"
+                android:src="@drawable/rounded_impr_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/impr_btn_text"
+                style="@style/TextAppearance.MaterialComponents.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_gravity="start|center_horizontal|center_vertical"
+                android:fontFamily="sans-serif-medium"
+                android:lines="2"
+                android:paddingLeft="12dp"
+                android:soundEffectsEnabled="true"
+                android:text="Improved\narchitecture"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/background_light"
+                android:textColorHighlight="@color/background_light"
+                android:textColorHint="@color/background_light"
+                android:textColorLink="@color/background_light"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/impr_symbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_gravity="right|center_vertical"
+                android:paddingRight="7dp"
+                android:src="@drawable/improve_symbol" />
+
+            <ImageView
+                android:id="@+id/impr_smybol_clicked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_gravity="right|center_horizontal|center_vertical"
+                android:paddingRight="7dp"
+                android:src="@drawable/improve_symbol_clicked"
+                android:visibility="invisible" />
+
+        </GridLayout>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginTop="16dp"
+            android:background="@color/background_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@color/background_light" />
+
+        <GridLayout
+            android:id="@+id/chart_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:ignore="MissingConstraints">
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pieChart1"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pieChart2"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pieChart3"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pieChart4"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pieChart5"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pieChart6"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pieChart7"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pieChart8"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pieChart9"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pieChart10"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pieChart11"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pieChart12"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+        </GridLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/left_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/grid_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switchBtn">
+
+
+            <ImageView
+                android:id="@+id/left_topcolor"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+
+                android:layout_marginBottom="-4dp"
+                android:background="@drawable/top_bar"
+                android:foregroundGravity="center_vertical|center"
+                app:layout_constraintBottom_toTopOf="@+id/analysisView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/left_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Architecture Description"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                android:textColor="@color/background_light"
+                app:layout_constraintBottom_toBottomOf="@+id/left_topcolor"
+                app:layout_constraintStart_toStartOf="@+id/left_topcolor"
+                app:layout_constraintTop_toTopOf="@+id/left_topcolor" />
+
+            <ImageButton
+                android:id="@+id/copyButton"
+                android:layout_width="47dp"
+                android:layout_height="40dp"
+                android:background="@color/transparent"
+                android:onClick="copyText"
+                android:src="@drawable/copied_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/left_topcolor"
+                app:layout_constraintEnd_toEndOf="@+id/left_topcolor"
+                app:layout_constraintTop_toTopOf="@+id/left_topcolor" />
+
+            <ScrollView
+                android:id="@+id/analysisView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/border_light"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/resultTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+            </ScrollView>
+
+            <View
+                android:id="@+id/dividerCopy"
+                android:layout_width="1dp"
+                android:layout_height="32dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintBottom_toBottomOf="@+id/left_topcolor"
+                app:layout_constraintEnd_toStartOf="@+id/copyButton"
+                app:layout_constraintTop_toTopOf="@+id/left_topcolor" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/right_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/grid_layout"
+            app:layout_constraintEnd_toEndOf="@+id/toolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switchBtn">
+
+            <ScrollView
+                android:id="@+id/ratingView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:foregroundGravity="center_vertical|center"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/diagram_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:foreground="@drawable/border_light"
+                    android:scaleType="fitCenter" />
+            </ScrollView>
+
+            <ImageView
+                android:id="@+id/right_topcolor"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+
+                android:layout_marginBottom="-4dp"
+                android:background="@drawable/top_bar"
+                android:foregroundGravity="center_vertical|center"
+                app:layout_constraintBottom_toTopOf="@+id/ratingView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/right_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Architecture Rating"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                android:textColor="@color/background_light"
+                app:layout_constraintBottom_toBottomOf="@+id/right_topcolor"
+                app:layout_constraintStart_toStartOf="@+id/right_topcolor"
+                app:layout_constraintTop_toTopOf="@+id/right_topcolor" />
+
+            <View
+                android:id="@+id/dividerSave"
+                android:layout_width="1dp"
+                android:layout_height="32dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintBottom_toBottomOf="@+id/right_topcolor"
+                app:layout_constraintEnd_toStartOf="@+id/saveButton"
+                app:layout_constraintTop_toTopOf="@+id/right_topcolor" />
+
+            <ImageButton
+                android:id="@+id/saveButton"
+                android:layout_width="48dp"
+                android:layout_height="45dp"
+                android:background="@color/transparent"
+                android:onClick="saveImage"
+                android:src="@drawable/save"
+                app:layout_constraintBottom_toBottomOf="@+id/right_topcolor"
+                app:layout_constraintEnd_toEndOf="@+id/right_topcolor"
+                app:layout_constraintTop_toTopOf="@+id/right_topcolor" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingHorizontal="20dp"
+            android:textAllCaps="false"
+            android:textColor="@color/background_light"
+            android:textOff=" "
+            android:textOn="  "
+            android:thumb="@drawable/thumb_desc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:showText="true"
+            app:track="@drawable/track_chart" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="44dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/transparent"
+            android:onClick="shareClick"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/share_button" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/popup_background"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/toolbar">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header">
+        <include layout="@layout/menu_list"/>
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>
