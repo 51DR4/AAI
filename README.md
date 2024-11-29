@@ -1,6 +1,6 @@
-## AAI is an Android Application for Exploring Software Architecture Sketches with LLMs
-# Overview
-AAI (ArchitectAI) leverages the power of the Large Language Model Gemini to analyze software architectures. By sending parallel requests to the LLM and storing the results in a database, the app optimizes response speed and efficiency. The user-friendly interface provides multiple features that allow users to capture, upload, and analyze images or text transcriptions of software architectures.
+# ArchitectAI
+#### Overview
+ArchitectAI (AAI) is an Android Application for Exploring Software Architecture Sketches with LLMs. Our app leverages the power of the Large Language Model Gemini to analyze software architectures. By sending parallel requests to the LLM and storing the results in a database, it optimizes response speed and efficiency. The user-friendly interface provides multiple features that allow users to capture, upload, and analyze images or text transcriptions of software architectures.
 
 ## Features
 
