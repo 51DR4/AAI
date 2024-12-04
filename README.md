@@ -38,7 +38,7 @@ ArchitectAI leverages the power of the Large Language Model Gemini to analyze so
   - *Sharing and Saving*: Export results as PDFs or save images for future use.
 
 ## Demo
-The demo video can be viewed [here](https://media-hosting.imagekit.io//2574979bfa1c49cf/demo%20(1).mp4?Expires=1733045173&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=ZmV24P7hCNSRwlsGLVxCATqMzTNwcDkkfTjiPy01FjLL3UuPffyIZoeE4NQqQnuehjpnObt95fTzPDSjlSc8D1UpAOzLJqt~Os3yV6XexT16lOZ0QvT7c2JoZU3JOGCrwSuFTDX7m2VssYIbQBj~f4oR8A9JTK95Wx2tp9FuCSrPwaOmcgO2T0F6tpAWhvR4RQUu9YaAsXwe7SnEJOzLUkSAiDBYJAbSZmYsyzGs0sN4~XhDxMHmLXNCccdQFWVbZ3roh0p2D2hX-VbkgOS7tucz2L9sdBGg4UK~g4UIEPDRaA1hqMVb7NG66TdUDoUIjgbG46n1aFy9OJc8dtHSLQ__)
+The demo video can be viewed [here](https://app.weet.co/play/919aa77a/create-video-tutorials-with-weet)
 
 ## Installation
 1. **Download the Source Code**
