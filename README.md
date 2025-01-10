@@ -33,7 +33,7 @@ ArchitectAI leverages the power of the Large Language Model Gemini to analyze so
   
   **Additional Features**:
 
-  - *Summary Button*: Summarizes long text to improve readability.
+  - *Summary Button*: Summarizes long text to improve readability, can then copy it for further usage.
   - *Help Section*: A detailed guide with an explanatory video on how to use the application.
   - *Sharing and Saving*: Export results as PDFs or save images for future use.
 
